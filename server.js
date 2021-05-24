@@ -5,10 +5,10 @@ const path = require('path');
 const app = express();
 
 // Serve only the static files form the dist directory
-app.use(express.static('./dist/angular-app-courseregistration'));
+app.use(express.static('./dist/angular10-springboot-csr-client'));
 
 app.get('/*', (req, res) =>
-    res.sendFile('index.html', {root: 'dist/angular-app-courseregistration/'}),
+    res.sendFile('index.html', {root: 'dist/angular10-springboot-csr-client/'}),
 );
 
 // Start the app by listening on the default Heroku port
