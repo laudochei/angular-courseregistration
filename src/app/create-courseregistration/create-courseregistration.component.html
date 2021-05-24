@@ -1,0 +1,31 @@
+<h3>Create Course Registration</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+      <table border="0" cellpadding="10">
+            <tr>
+                <td>Matno:</td>
+                <td><input type="text" class="form-control" id="matno" required [(ngModel)]="courseregistration.matno" name="matno"></td>
+            </tr>
+            <tr>
+                <td>Course code:</td>
+                <td><input type="text" class="form-control" id="coursecode" required [(ngModel)]="courseregistration.coursecode" name="coursecode"></td>
+            </tr>
+            <tr>
+                <td>Term:</td>
+                <td><input type="text" class="form-control" id="term" required [(ngModel)]="courseregistration.term" name="term"></td>
+            </tr>
+            <tr>
+                <td>Academic session:</td>
+                <td><input type="text" class="form-control" id="academicsession" required [(ngModel)]="courseregistration.academicsession" name="academicsession"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button type="submit" class="btn btn-success">Submit</button></td>
+            </tr>
+    </table>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+  <!-- <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
+</div>

@@ -1,0 +1,22 @@
+<h2>Course Registration Details</h2> 
+
+<hr/>
+<div *ngIf="courseregistration">
+  <div>
+    <label><b>Matno: </b></label> {{courseregistration.matno}}
+  </div>
+  <div>
+    <label><b>Course code: </b></label> {{courseregistration.coursecode}}
+  </div>
+  <div>
+    <label><b>Term:</b></label> {{courseregistration.term}}
+  </div> 
+  <div>
+    <label><b>Academic Session:</b></label> {{courseregistration.academicsession}}
+  </div> 
+    
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Course Registration List</button><br>

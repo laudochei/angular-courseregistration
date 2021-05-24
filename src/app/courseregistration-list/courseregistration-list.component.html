@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Course Registration List</h2>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Mat No.:</th>
+          <th>Course Code:</th>
+          <th>Term:</th>
+          <th>Academic Session:</th>
+          <th>Action:</th>
+        </tr>
+      </thead>
+      
+      <tbody>
+        <tr *ngFor="let courseregistration of courseregistrations | async">
+          <td>{{courseregistration.matno}}</td>
+          <td>{{courseregistration.coursecode}}</td>
+          <td>{{courseregistration.term}}</td>
+          <td>{{courseregistration.academicsession}}</td>
+          <td><button (click)="deleteCourseRegistration(courseregistration.id)" class="btn btn-danger">Delete</button>
+              <button (click)="updateCourseRegistration(courseregistration.id)" class="btn btn-info" style="margin-left: 10px">Update</button>
+              <button (click)="courseregistrationDetails(courseregistration.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
